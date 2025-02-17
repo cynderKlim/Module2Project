@@ -11,8 +11,8 @@ public class Main {
 
         while (!maze.isFinished()) {
             System.out.println(maze.getCurrentRoomDescription());
-            System.out.println("You have rooms to your " + maze.getCurrentRoomExits() + ".");
-            System.out.print("Which way would you like to go (n/s/e/w)? You may also check your inventory (v), loot the room (l), interact with the room (i), or try to go up or down (u/d): ");
+            System.out.println("You have room(s) to your " + maze.getCurrentRoomExits() + ".");
+            System.out.print("You can type n, s, e, w to go in the cardinal directions, i for interacting, l for looting, v for inventory access, or x if you see a way out.\nWhat would you like to do?: ");
             char command = scanner.next().charAt(0);
 
             switch (command) {
@@ -41,7 +41,7 @@ public class Main {
                     System.out.println(maze.getPlayerInventory());
                     break;
                 default:
-                    System.out.println("This isn't going to work, why are you wasting your time? It's funny but not enough to save you.");
+                    System.out.println("I did tell you your options, and yet you still tried this? You're funny, I'll give you that. Not funny enough though. (-20)");
                     maze.getPlayer().removeToScore(20);
             }
         }

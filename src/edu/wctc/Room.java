@@ -28,8 +28,8 @@ public abstract class Room {
         if (south != null) exits.append("south ");
         if (east != null) exits.append("east ");
         if (west != null) exits.append("west ");
-        if (up != null) exits.append("up ");
-        if (down != null) exits.append("down ");
+        if (up != null) exits.append("up the ladder ");
+        if (down != null) exits.append("down the ladder ");
         return exits.toString().trim();
     }
 
