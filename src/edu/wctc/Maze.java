@@ -8,8 +8,7 @@ public class Maze {
     public Maze() {
         this.player = new Player();
         this.isFinished = false;
-        // Initialize rooms and set currentRoom
-        // Example:
+
         Room startRoom = new StartRoom("Start Room");
         Room treasureRoom = new TreasureRoom("Treasure Room");
         Room puzzleRoom = new PuzzleRoom("Puzzle Room");
@@ -26,7 +25,7 @@ public class Maze {
         if (currentRoom instanceof Exitable) {
             return ((Exitable) currentRoom).exit(player);
         }
-        return "This room is not exitable.";
+        return "You cannot escape right now.";
     }
 
     public String interactWithCurrentRoom() {
@@ -40,7 +39,7 @@ public class Maze {
         if (currentRoom instanceof Lootable) {
             return ((Lootable) currentRoom).loot(player);
         }
-        return "This room is not lootable.";
+        return "This room has nothing of value.";
     }
 
     public boolean move(char direction) {
@@ -49,6 +48,10 @@ public class Maze {
             return true;
         }
         return false;
+    }
+
+    public Player getPlayer() {
+        return player;
     }
 
     public int getPlayerScore() {

@@ -7,7 +7,7 @@ public class TreasureRoom extends Room implements Lootable {
 
     @Override
     public String getDescription() {
-        return "You see a room filled with treasure.";
+        return "You see a room filled with treasure! Wonder why someone left all this here.";
     }
 
     @Override

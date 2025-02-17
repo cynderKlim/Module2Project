@@ -20,6 +20,10 @@ public class Player {
         score += points;
     }
 
+    public void removeToScore(int points) {
+        score -= points;
+    }
+
     public String getInventory() {
         if (inventory.isEmpty()) {
             return "Inventory is empty.";

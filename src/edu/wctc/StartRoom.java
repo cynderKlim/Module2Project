@@ -7,11 +7,11 @@ public class StartRoom extends Room implements Exitable {
 
     @Override
     public String getDescription() {
-        return "You are in the start room.";
+        return "You are in the starting room.";
     }
 
     @Override
     public String exit(Player player) {
-        return "You have exited the maze!";
+        return "You have escaped the maze, against all odds!";
     }
 }

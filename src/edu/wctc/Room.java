@@ -24,12 +24,12 @@ public abstract class Room {
 
     public String getExits() {
         StringBuilder exits = new StringBuilder();
-        if (north != null) exits.append("n ");
-        if (south != null) exits.append("s ");
-        if (east != null) exits.append("e ");
-        if (west != null) exits.append("w ");
-        if (up != null) exits.append("u ");
-        if (down != null) exits.append("d ");
+        if (north != null) exits.append("north ");
+        if (south != null) exits.append("south ");
+        if (east != null) exits.append("east ");
+        if (west != null) exits.append("west ");
+        if (up != null) exits.append("up ");
+        if (down != null) exits.append("down ");
         return exits.toString().trim();
     }
 
